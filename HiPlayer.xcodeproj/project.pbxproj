@@ -26,20 +26,20 @@
 			containerPortal = 253F2E1F1A7F5907007FD89E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 253F2E261A7F5907007FD89E;
-			remoteInfo = HiPlayerDraggableVideo;
+			remoteInfo = HiPlayer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		253F2E271A7F5907007FD89E /* HiPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		253F2E271A7F5907007FD89E /* HiPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253F2E2B1A7F5907007FD89E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253F2E2C1A7F5907007FD89E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		253F2E2E1A7F5907007FD89E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HiPlayerDraggableVideo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		253F2E2F1A7F5907007FD89E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HiPlayerDraggableVideo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		253F2E2E1A7F5907007FD89E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HiPlayer/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		253F2E2F1A7F5907007FD89E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HiPlayer/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		253F2E351A7F5907007FD89E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		253F2E371A7F5907007FD89E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		253F2E3A1A7F5907007FD89E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		253F2E401A7F5907007FD89E /* HiPlayerDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiPlayerDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		253F2E401A7F5907007FD89E /* HiPlayer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiPlayer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		253F2E501A7F5984007FD89E /* sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.mp4; sourceTree = "<group>"; };
 		253F2E531A7F5A4A007FD89E /* FirstVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstVC.h; sourceTree = "<group>"; };
 		253F2E541A7F5A4A007FD89E /* FirstVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstVC.m; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		253F2E1E1A7F5907007FD89E = {
 			isa = PBXGroup;
 			children = (
-				253F2E291A7F5907007FD89E /* HiPlayerDraggableVideo */,
+				253F2E291A7F5907007FD89E /* HiPlayer */,
 				253F2E281A7F5907007FD89E /* Products */,
 				5742BC0FC2C6EB14433A24D4 /* Pods */,
 				51DAFFCC39285C137A2FD6A4 /* Frameworks */,
@@ -84,13 +84,13 @@
 		253F2E281A7F5907007FD89E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				253F2E271A7F5907007FD89E /* HiPlayerDemo.app */,
-				253F2E401A7F5907007FD89E /* HiPlayerDemo.xctest */,
+				253F2E271A7F5907007FD89E /* HiPlayer.app */,
+				253F2E401A7F5907007FD89E /* HiPlayer.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		253F2E291A7F5907007FD89E /* HiPlayerDraggableVideo */ = {
+		253F2E291A7F5907007FD89E /* HiPlayer */ = {
 			isa = PBXGroup;
 			children = (
 				253F2E5A1A7F5A68007FD89E /* AppDelegate */,
@@ -101,8 +101,8 @@
 				253F2E391A7F5907007FD89E /* LaunchScreen.xib */,
 				253F2E2A1A7F5907007FD89E /* Supporting Files */,
 			);
-			name = HiPlayerDraggableVideo;
-			path = HiPlayerDraggableVideo;
+			name = HiPlayer;
+			path = HiPlayer;
 			sourceTree = "<group>";
 		};
 		253F2E2A1A7F5907007FD89E /* Supporting Files */ = {
@@ -164,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		253F2E261A7F5907007FD89E /* HiPlayerDemo */ = {
+		253F2E261A7F5907007FD89E /* HiPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 253F2E4A1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayerDemo" */;
+			buildConfigurationList = 253F2E4A1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayer" */;
 			buildPhases = (
 				9288C7A6B037B204BD67F774 /* Check Pods Manifest.lock */,
 				253F2E231A7F5907007FD89E /* Sources */,
@@ -179,14 +179,14 @@
 			);
 			dependencies = (
 			);
-			name = HiPlayerDemo;
-			productName = HiPlayerDraggableVideo;
-			productReference = 253F2E271A7F5907007FD89E /* HiPlayerDemo.app */;
+			name = HiPlayer;
+			productName = HiPlayer;
+			productReference = 253F2E271A7F5907007FD89E /* HiPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		253F2E3F1A7F5907007FD89E /* HiPlayerDemoTests */ = {
+		253F2E3F1A7F5907007FD89E /* HiPlayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 253F2E4D1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayerDemoTests" */;
+			buildConfigurationList = 253F2E4D1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayerTests" */;
 			buildPhases = (
 				253F2E3C1A7F5907007FD89E /* Sources */,
 				253F2E3D1A7F5907007FD89E /* Frameworks */,
@@ -197,9 +197,9 @@
 			dependencies = (
 				253F2E421A7F5907007FD89E /* PBXTargetDependency */,
 			);
-			name = HiPlayerDemoTests;
-			productName = HiPlayerDraggableVideoTests;
-			productReference = 253F2E401A7F5907007FD89E /* HiPlayerDemo.xctest */;
+			name = HiPlayerTests;
+			productName = HiPlayerTests;
+			productReference = 253F2E401A7F5907007FD89E /* HiPlayer.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 253F2E221A7F5907007FD89E /* Build configuration list for PBXProject "HiPlayerDemo" */;
+			buildConfigurationList = 253F2E221A7F5907007FD89E /* Build configuration list for PBXProject "HiPlayer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,8 +234,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				253F2E261A7F5907007FD89E /* HiPlayerDemo */,
-				253F2E3F1A7F5907007FD89E /* HiPlayerDemoTests */,
+				253F2E261A7F5907007FD89E /* HiPlayer */,
+				253F2E3F1A7F5907007FD89E /* HiPlayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -335,7 +335,7 @@
 /* Begin PBXTargetDependency section */
 		253F2E421A7F5907007FD89E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 253F2E261A7F5907007FD89E /* HiPlayerDemo */;
+			target = 253F2E261A7F5907007FD89E /* HiPlayer */;
 			targetProxy = 253F2E411A7F5907007FD89E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -444,10 +444,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = HiPlayerDraggableVideo/Info.plist;
+				INFOPLIST_FILE = HiPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiPlayer.hiplayer;
-				PRODUCT_NAME = HiPlayerDemo;
+				PRODUCT_NAME = HiPlayer;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -459,10 +459,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = HiPlayerDraggableVideo/Info.plist;
+				INFOPLIST_FILE = HiPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiPlayer.hiplayer;
-				PRODUCT_NAME = HiPlayerDemo;
+				PRODUCT_NAME = HiPlayer;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -479,11 +479,11 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = HiPlayerDraggableVideoTests/Info.plist;
+				INFOPLIST_FILE = HiPlayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vizllx.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = HiPlayerDemo;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiPlayerDemo.app/HiPlayerDemo";
+				PRODUCT_NAME = HiPlayer;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiPlayer.app/HiPlayer";
 			};
 			name = Debug;
 		};
@@ -495,18 +495,18 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = HiPlayerDraggableVideoTests/Info.plist;
+				INFOPLIST_FILE = HiPlayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vizllx.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = HiPlayerDemo;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiPlayerDemo.app/HiPlayerDemo";
+				PRODUCT_NAME = HiPlayer;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HiPlayer.app/HiPlayer";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		253F2E221A7F5907007FD89E /* Build configuration list for PBXProject "HiPlayerDemo" */ = {
+		253F2E221A7F5907007FD89E /* Build configuration list for PBXProject "HiPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				253F2E481A7F5907007FD89E /* Debug */,
@@ -515,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		253F2E4A1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayerDemo" */ = {
+		253F2E4A1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				253F2E4B1A7F5907007FD89E /* Debug */,
@@ -524,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		253F2E4D1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayerDemoTests" */ = {
+		253F2E4D1A7F5907007FD89E /* Build configuration list for PBXNativeTarget "HiPlayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				253F2E4E1A7F5907007FD89E /* Debug */,
