@@ -17,6 +17,8 @@
 		253F2E591A7F5A4A007FD89E /* BSVideoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253F2E571A7F5A4A007FD89E /* BSVideoDetailController.m */; };
 		9B4A43121C04A37E0038ACA0 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9B4A43111C04A37E0038ACA0 /* download.jpeg */; };
 		9BB9CC221C05EEB5001ADBC8 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BB9CC211C05EEB5001ADBC8 /* 1.jpg */; };
+		CDDF06771C26ECAB0083EC86 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CDDF06761C26ECAB0083EC86 /* CoreDataHelper.m */; };
+		CDDF06791C26F9E10083EC86 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDF06781C26F9E10083EC86 /* CoreData.framework */; };
 		DC2D24F7FA51CFC9744A03C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26A3949E2863D0B9B96AF6F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,9 @@
 		9B4A43111C04A37E0038ACA0 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpeg; sourceTree = "<group>"; };
 		9BB9CC211C05EEB5001ADBC8 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		C26A3949E2863D0B9B96AF6F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDDF06751C26ECAB0083EC86 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataHelper.h; path = CoreDataHelper/CoreDataHelper.h; sourceTree = "<group>"; };
+		CDDF06761C26ECAB0083EC86 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataHelper.m; path = CoreDataHelper/CoreDataHelper.m; sourceTree = "<group>"; };
+		CDDF06781C26F9E10083EC86 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F0E27032F6AA559B9A7D7D6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDF06791C26F9E10083EC86 /* CoreData.framework in Frameworks */,
 				DC2D24F7FA51CFC9744A03C1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				253F2E5A1A7F5A68007FD89E /* AppDelegate */,
+				CDDF06741C26EC970083EC86 /* CoreDataHelper */,
 				253F2E521A7F5A4A007FD89E /* FirstController */,
 				253F2E551A7F5A4A007FD89E /* VideoController */,
 				253F2E341A7F5907007FD89E /* Main.storyboard */,
@@ -101,7 +108,6 @@
 				253F2E391A7F5907007FD89E /* LaunchScreen.xib */,
 				253F2E2A1A7F5907007FD89E /* Supporting Files */,
 			);
-			name = HiPlayer;
 			path = HiPlayer;
 			sourceTree = "<group>";
 		};
@@ -147,6 +153,7 @@
 		51DAFFCC39285C137A2FD6A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDDF06781C26F9E10083EC86 /* CoreData.framework */,
 				C26A3949E2863D0B9B96AF6F /* libPods.a */,
 			);
 			name = Frameworks;
@@ -159,6 +166,15 @@
 				F0E27032F6AA559B9A7D7D6E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDDF06741C26EC970083EC86 /* CoreDataHelper */ = {
+			isa = PBXGroup;
+			children = (
+				CDDF06751C26ECAB0083EC86 /* CoreDataHelper.h */,
+				CDDF06761C26ECAB0083EC86 /* CoreDataHelper.m */,
+			);
+			name = CoreDataHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +335,7 @@
 				253F2E581A7F5A4A007FD89E /* FirstVC.m in Sources */,
 				253F2E301A7F5907007FD89E /* AppDelegate.m in Sources */,
 				253F2E2D1A7F5907007FD89E /* main.m in Sources */,
+				CDDF06771C26ECAB0083EC86 /* CoreDataHelper.m in Sources */,
 				253F2E591A7F5A4A007FD89E /* BSVideoDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
