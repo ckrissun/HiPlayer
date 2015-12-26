@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CoreDataHelper/CoreDataHelper.h"
+#import "CoreDataHelper.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

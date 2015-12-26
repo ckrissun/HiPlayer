@@ -1,5 +1,5 @@
 //
-//  BSVideoDetailController.h
+//  CommentViewController.h
 //  HiPlayer
 //
 //  Created by Paqin on 12/1/15.
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, UIPanGestureRecognizerDirection) {
     UIPanGestureRecognizerDirectionRight
 };
 
-@interface BSVideoDetailController : UIViewController<UIGestureRecognizerDelegate,UITextViewDelegate>
+@interface CommentViewController : UIViewController<UIGestureRecognizerDelegate,UITextViewDelegate>
 @property (nonatomic, assign) id  <RemoveViewDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *viewYouTube;
 @property (weak, nonatomic) IBOutlet UIView *viewTable;

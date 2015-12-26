@@ -1,5 +1,5 @@
 //
-//  FirstVC.h
+//  NoteViewController.h
 //  HiPlayer
 //
 //  Created by Paqin on 12/1/15.
@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BSVideoDetailController.h"
+#import "CommentViewController.h"
 
 //Define the protocol for the delegate
 
-@interface FirstVC : UIViewController<RemoveViewDelegate>
+@interface NoteViewController : UIViewController<RemoveViewDelegate>
 
 
-@property(strong,nonatomic)BSVideoDetailController *secondViewController;
+@property(strong,nonatomic)CommentViewController *secondViewController;
 
 @property (weak, nonatomic) IBOutlet UITableView *commentsTable;
 

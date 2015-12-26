@@ -1,20 +1,20 @@
 //
-//  FirstVC.m
+//  NoteViewController.m
 //  HiPlayer
 //
 //  Created by Paqin on 12/1/15.
 //  Copyright © 2015 Neo. All rights reserved.
 //
-#import "FirstVC.h"
+#import "NoteViewController.h"
 #define PAGESIZE 1
 
 
-@interface FirstVC ()
+@interface NoteViewController ()
 
 
 
 @end
-@implementation FirstVC
+@implementation NoteViewController
 
 
 - (void)viewDidLoad {
@@ -212,11 +212,11 @@
 #pragma mark -Important Methods
 
 -(void)showSecondController
-{
+{   
     if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
 
-    self.secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"BSVideoDetailController"];
+    self.secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentViewController"];
     //initial frame
     self.secondViewController.view.frame=CGRectMake(self.view.frame.size.width-50, self.view.frame.size.height-50, self.view.frame.size.width, self.view.frame.size.height);
     self.secondViewController.initialFirstViewFrame=self.view.frame;

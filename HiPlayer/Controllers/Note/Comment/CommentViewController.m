@@ -1,5 +1,5 @@
 //
-//  BSVideoDetailController.m
+//  CommentViewController.m
 //  HiPlayer
 //
 //  Created by Paqin on 12/1/15.
@@ -8,18 +8,18 @@
 
 
 
-#import "BSVideoDetailController.h"
+#import "CommentViewController.h"
 #import "QuartzCore/CALayer.h"
 
 
 
-@interface BSVideoDetailController ()
+@interface CommentViewController ()
 
 @property (strong, nonatomic) NSMutableArray* StopSpotArrary;
 
 @end
 
-@implementation BSVideoDetailController
+@implementation CommentViewController
 {
     //local Frame store
     CGRect youtubeFrame;
