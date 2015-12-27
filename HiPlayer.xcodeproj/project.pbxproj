@@ -17,7 +17,6 @@
 		CD064F361C2EBA700027D752 /* sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD064F331C2EBA700027D752 /* sample.mp4 */; };
 		CD064F3A1C2EBAB40027D752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F391C2EBAB40027D752 /* AppDelegate.m */; };
 		CD064F3E1C2EBB1D0027D752 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F3D1C2EBB1D0027D752 /* CoreDataHelper.m */; };
-		CD064F451C2EBCCC0027D752 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD064F431C2EBCCC0027D752 /* Info.plist */; };
 		CD064F461C2EBCCC0027D752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F441C2EBCCC0027D752 /* main.m */; };
 		CDDF06791C26F9E10083EC86 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDF06781C26F9E10083EC86 /* CoreData.framework */; };
 		DC2D24F7FA51CFC9744A03C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26A3949E2863D0B9B96AF6F /* libPods.a */; };
@@ -308,7 +307,6 @@
 				CD064F351C2EBA700027D752 /* download.jpeg in Resources */,
 				CD064F341C2EBA700027D752 /* 1.jpg in Resources */,
 				CD064F361C2EBA700027D752 /* sample.mp4 in Resources */,
-				CD064F451C2EBCCC0027D752 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +494,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HiPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiPlayer.hiplayer;
 				PRODUCT_NAME = HiPlayer;
@@ -511,6 +510,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HiPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiPlayer.hiplayer;
 				PRODUCT_NAME = HiPlayer;
