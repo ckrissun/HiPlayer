@@ -301,7 +301,7 @@
                                                     <action selector="btnSendAction:" destination="n1I-NN-SCZ" eventType="touchUpInside" id="tZQ-Kf-Zz9"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-GD-aOw" customClass="BSGrowingTextView">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-GD-aOw" customClass="UITextView">
                                                 <rect key="frame" x="5" y="7" width="272" height="30"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
