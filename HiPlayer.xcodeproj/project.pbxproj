@@ -12,12 +12,15 @@
 		CD064F281C2E9F1E0027D752 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F271C2E9F1E0027D752 /* NoteViewController.m */; };
 		CD064F2C1C2E9F350027D752 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F2B1C2E9F350027D752 /* CommentViewController.m */; };
 		CD064F2E1C2EB6840027D752 /* Note.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD064F2D1C2EB6840027D752 /* Note.storyboard */; };
-		CD064F341C2EBA700027D752 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD064F311C2EBA700027D752 /* 1.jpg */; };
-		CD064F351C2EBA700027D752 /* download.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CD064F321C2EBA700027D752 /* download.jpeg */; };
 		CD064F361C2EBA700027D752 /* sample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD064F331C2EBA700027D752 /* sample.mp4 */; };
 		CD064F3A1C2EBAB40027D752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F391C2EBAB40027D752 /* AppDelegate.m */; };
 		CD064F3E1C2EBB1D0027D752 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F3D1C2EBB1D0027D752 /* CoreDataHelper.m */; };
 		CD064F461C2EBCCC0027D752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F441C2EBCCC0027D752 /* main.m */; };
+		CD8DECFD1C2FDCD800069EAD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8DECFC1C2FDCD800069EAD /* Login.storyboard */; };
+		CD8DED031C2FDEEC00069EAD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */; };
+		CD8DED061C2FE46F00069EAD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DED051C2FE46F00069EAD /* LoginViewController.m */; };
+		CD8DED0A1C2FFC5600069EAD /* piano.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD8DED081C2FFC5600069EAD /* piano.jpg */; };
+		CD8DED0B1C2FFC5600069EAD /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD8DED091C2FFC5600069EAD /* profile.jpg */; };
 		CDDF06791C26F9E10083EC86 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDF06781C26F9E10083EC86 /* CoreData.framework */; };
 		DC2D24F7FA51CFC9744A03C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26A3949E2863D0B9B96AF6F /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -44,8 +47,6 @@
 		CD064F2A1C2E9F350027D752 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentViewController.h; path = Controllers/Note/Comment/CommentViewController.h; sourceTree = "<group>"; };
 		CD064F2B1C2E9F350027D752 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentViewController.m; path = Controllers/Note/Comment/CommentViewController.m; sourceTree = "<group>"; };
 		CD064F2D1C2EB6840027D752 /* Note.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Note.storyboard; path = Controllers/Note/Note.storyboard; sourceTree = "<group>"; };
-		CD064F311C2EBA700027D752 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = Resources/1.jpg; sourceTree = "<group>"; };
-		CD064F321C2EBA700027D752 /* download.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = download.jpeg; path = Resources/download.jpeg; sourceTree = "<group>"; };
 		CD064F331C2EBA700027D752 /* sample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = sample.mp4; path = Resources/sample.mp4; sourceTree = "<group>"; };
 		CD064F381C2EBAB40027D752 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Application/AppDelegate.h; sourceTree = "<group>"; };
 		CD064F391C2EBAB40027D752 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Application/AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +54,12 @@
 		CD064F3D1C2EBB1D0027D752 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataHelper.m; path = Models/CoreDataHelper/CoreDataHelper.m; sourceTree = "<group>"; };
 		CD064F431C2EBCCC0027D752 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD064F441C2EBCCC0027D752 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD8DECFC1C2FDCD800069EAD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Controllers/Login/Login.storyboard; sourceTree = "<group>"; };
+		CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = Resources/FontAwesome.ttf; sourceTree = "<group>"; };
+		CD8DED051C2FE46F00069EAD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/Login/LoginViewController.m; sourceTree = "<group>"; };
+		CD8DED071C2FFB9600069EAD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/Login/LoginViewController.h; sourceTree = "<group>"; };
+		CD8DED081C2FFC5600069EAD /* piano.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = piano.jpg; path = Resources/piano.jpg; sourceTree = "<group>"; };
+		CD8DED091C2FFC5600069EAD /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpg; path = Resources/profile.jpg; sourceTree = "<group>"; };
 		CDDF06781C26F9E10083EC86 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F0E27032F6AA559B9A7D7D6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +168,9 @@
 		CD064F241C2E9E440027D752 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CD8DECFC1C2FDCD800069EAD /* Login.storyboard */,
+				CD8DED071C2FFB9600069EAD /* LoginViewController.h */,
+				CD8DED051C2FE46F00069EAD /* LoginViewController.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -184,8 +194,9 @@
 		CD064F2F1C2EBA1C0027D752 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CD064F311C2EBA700027D752 /* 1.jpg */,
-				CD064F321C2EBA700027D752 /* download.jpeg */,
+				CD8DED081C2FFC5600069EAD /* piano.jpg */,
+				CD8DED091C2FFC5600069EAD /* profile.jpg */,
+				CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */,
 				CD064F331C2EBA700027D752 /* sample.mp4 */,
 			);
 			name = Resources;
@@ -301,11 +312,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8DED031C2FDEEC00069EAD /* FontAwesome.ttf in Resources */,
 				CD064F2E1C2EB6840027D752 /* Note.storyboard in Resources */,
 				253F2E3B1A7F5907007FD89E /* LaunchScreen.xib in Resources */,
+				CD8DED0B1C2FFC5600069EAD /* profile.jpg in Resources */,
+				CD8DECFD1C2FDCD800069EAD /* Login.storyboard in Resources */,
 				253F2E381A7F5907007FD89E /* Images.xcassets in Resources */,
-				CD064F351C2EBA700027D752 /* download.jpeg in Resources */,
-				CD064F341C2EBA700027D752 /* 1.jpg in Resources */,
+				CD8DED0A1C2FFC5600069EAD /* piano.jpg in Resources */,
 				CD064F361C2EBA700027D752 /* sample.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +387,7 @@
 			files = (
 				CD064F461C2EBCCC0027D752 /* main.m in Sources */,
 				CD064F2C1C2E9F350027D752 /* CommentViewController.m in Sources */,
+				CD8DED061C2FE46F00069EAD /* LoginViewController.m in Sources */,
 				CD064F3A1C2EBAB40027D752 /* AppDelegate.m in Sources */,
 				CD064F281C2E9F1E0027D752 /* NoteViewController.m in Sources */,
 				CD064F3E1C2EBB1D0027D752 /* CoreDataHelper.m in Sources */,
