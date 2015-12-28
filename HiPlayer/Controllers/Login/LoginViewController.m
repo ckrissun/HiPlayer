@@ -70,7 +70,7 @@
         return;
     }
     if (sender == _passwordField) {
-        [self hidesBottomBarWhenPushed];
+        [self hideKeyboard];
         if (_loginButton.enabled) {
             [self login];
         }
