@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "NoteViewController.h"
+#import "NSString+MD5.h"
 
 @implementation LoginViewController
 
@@ -78,7 +79,7 @@
 }
 
 static NSString *const defaultAccountName = @"test";
-static NSString *const defaultPassword = @"test";
+static NSString *const defaultPassword = @"d8bab9216bb259fb4ffa5445ecfb9c05";
 
 - (void)login {
     _hub = [self createHUD];
@@ -86,11 +87,11 @@ static NSString *const defaultPassword = @"test";
     _hub.userInteractionEnabled = NO;
     
     // TODO
-    
     NSLog(@"Account: %@, Password: %@", _accountField.text, _passwordField.text);
     
     // if login successfully, just go to the NoteView.
-    if ([_accountField.text compare:defaultAccountName] || [_passwordField.text compare:defaultPassword]) {
+    NSString *md5ForPassword = [_passwordField.text getMD5];
+    if ([_accountField.text compare:defaultAccountName] || [md5ForPassword compare:defaultPassword]) {
         _hub.labelText = @"Login Fail";
         _hub.labelColor = [UIColor redColor];
         [_hub hide:YES afterDelay:1];

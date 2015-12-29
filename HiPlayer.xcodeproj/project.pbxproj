@@ -16,6 +16,7 @@
 		CD064F3A1C2EBAB40027D752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F391C2EBAB40027D752 /* AppDelegate.m */; };
 		CD064F3E1C2EBB1D0027D752 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F3D1C2EBB1D0027D752 /* CoreDataHelper.m */; };
 		CD064F461C2EBCCC0027D752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F441C2EBCCC0027D752 /* main.m */; };
+		CD31FF931C324FBF00EA3AB5 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CD31FF921C324FBF00EA3AB5 /* NSString+MD5.m */; };
 		CD8DECFD1C2FDCD800069EAD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8DECFC1C2FDCD800069EAD /* Login.storyboard */; };
 		CD8DED031C2FDEEC00069EAD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */; };
 		CD8DED061C2FE46F00069EAD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DED051C2FE46F00069EAD /* LoginViewController.m */; };
@@ -54,6 +55,8 @@
 		CD064F3D1C2EBB1D0027D752 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataHelper.m; path = Models/CoreDataHelper/CoreDataHelper.m; sourceTree = "<group>"; };
 		CD064F431C2EBCCC0027D752 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD064F441C2EBCCC0027D752 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD31FF911C324FBF00EA3AB5 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "Categories/NSString+MD5.h"; sourceTree = "<group>"; };
+		CD31FF921C324FBF00EA3AB5 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "Categories/NSString+MD5.m"; sourceTree = "<group>"; };
 		CD8DECFC1C2FDCD800069EAD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Controllers/Login/Login.storyboard; sourceTree = "<group>"; };
 		CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = Resources/FontAwesome.ttf; sourceTree = "<group>"; };
 		CD8DED051C2FE46F00069EAD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/Login/LoginViewController.m; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 			children = (
 				CD064F371C2EBA920027D752 /* Application */,
 				CD064F221C2E3C450027D752 /* Controllers */,
+				CD31FF8C1C324E9300EA3AB5 /* Categories */,
 				CD064F3B1C2EBAE60027D752 /* Models */,
 				253F2E371A7F5907007FD89E /* Images.xcassets */,
 				253F2E391A7F5907007FD89E /* LaunchScreen.xib */,
@@ -217,6 +221,15 @@
 				CDDF06741C26EC970083EC86 /* CoreDataHelper */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CD31FF8C1C324E9300EA3AB5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CD31FF911C324FBF00EA3AB5 /* NSString+MD5.h */,
+				CD31FF921C324FBF00EA3AB5 /* NSString+MD5.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		CDDF06741C26EC970083EC86 /* CoreDataHelper */ = {
@@ -391,6 +404,7 @@
 				CD064F3A1C2EBAB40027D752 /* AppDelegate.m in Sources */,
 				CD064F281C2E9F1E0027D752 /* NoteViewController.m in Sources */,
 				CD064F3E1C2EBB1D0027D752 /* CoreDataHelper.m in Sources */,
+				CD31FF931C324FBF00EA3AB5 /* NSString+MD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
