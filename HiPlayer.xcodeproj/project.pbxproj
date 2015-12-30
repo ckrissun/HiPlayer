@@ -17,6 +17,12 @@
 		CD064F3E1C2EBB1D0027D752 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F3D1C2EBB1D0027D752 /* CoreDataHelper.m */; };
 		CD064F461C2EBCCC0027D752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F441C2EBCCC0027D752 /* main.m */; };
 		CD31FF931C324FBF00EA3AB5 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CD31FF921C324FBF00EA3AB5 /* NSString+MD5.m */; };
+		CD31FFF41C33F5AB00EA3AB5 /* AppIcon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = CD31FFEC1C33F5AB00EA3AB5 /* AppIcon-58.png */; };
+		CD31FFF51C33F5AB00EA3AB5 /* AppIcon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = CD31FFED1C33F5AB00EA3AB5 /* AppIcon-60.png */; };
+		CD31FFF61C33F5AB00EA3AB5 /* AppIcon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = CD31FFEE1C33F5AB00EA3AB5 /* AppIcon-80.png */; };
+		CD31FFF71C33F5AB00EA3AB5 /* AppIcon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = CD31FFEF1C33F5AB00EA3AB5 /* AppIcon-87.png */; };
+		CD31FFF81C33F5AB00EA3AB5 /* AppIcon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = CD31FFF01C33F5AB00EA3AB5 /* AppIcon-120.png */; };
+		CD31FFF91C33F5AB00EA3AB5 /* AppIcon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = CD31FFF11C33F5AB00EA3AB5 /* AppIcon-180.png */; };
 		CD8DECFD1C2FDCD800069EAD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8DECFC1C2FDCD800069EAD /* Login.storyboard */; };
 		CD8DED031C2FDEEC00069EAD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */; };
 		CD8DED061C2FE46F00069EAD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DED051C2FE46F00069EAD /* LoginViewController.m */; };
@@ -57,6 +63,12 @@
 		CD064F441C2EBCCC0027D752 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD31FF911C324FBF00EA3AB5 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "Categories/NSString+MD5.h"; sourceTree = "<group>"; };
 		CD31FF921C324FBF00EA3AB5 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "Categories/NSString+MD5.m"; sourceTree = "<group>"; };
+		CD31FFEC1C33F5AB00EA3AB5 /* AppIcon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon-58.png"; path = "Resources/AppIcon-58.png"; sourceTree = "<group>"; };
+		CD31FFED1C33F5AB00EA3AB5 /* AppIcon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon-60.png"; path = "Resources/AppIcon-60.png"; sourceTree = "<group>"; };
+		CD31FFEE1C33F5AB00EA3AB5 /* AppIcon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon-80.png"; path = "Resources/AppIcon-80.png"; sourceTree = "<group>"; };
+		CD31FFEF1C33F5AB00EA3AB5 /* AppIcon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon-87.png"; path = "Resources/AppIcon-87.png"; sourceTree = "<group>"; };
+		CD31FFF01C33F5AB00EA3AB5 /* AppIcon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon-120.png"; path = "Resources/AppIcon-120.png"; sourceTree = "<group>"; };
+		CD31FFF11C33F5AB00EA3AB5 /* AppIcon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon-180.png"; path = "Resources/AppIcon-180.png"; sourceTree = "<group>"; };
 		CD8DECFC1C2FDCD800069EAD /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Controllers/Login/Login.storyboard; sourceTree = "<group>"; };
 		CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = Resources/FontAwesome.ttf; sourceTree = "<group>"; };
 		CD8DED051C2FE46F00069EAD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Controllers/Login/LoginViewController.m; sourceTree = "<group>"; };
@@ -198,6 +210,12 @@
 		CD064F2F1C2EBA1C0027D752 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD31FFEC1C33F5AB00EA3AB5 /* AppIcon-58.png */,
+				CD31FFED1C33F5AB00EA3AB5 /* AppIcon-60.png */,
+				CD31FFEE1C33F5AB00EA3AB5 /* AppIcon-80.png */,
+				CD31FFEF1C33F5AB00EA3AB5 /* AppIcon-87.png */,
+				CD31FFF01C33F5AB00EA3AB5 /* AppIcon-120.png */,
+				CD31FFF11C33F5AB00EA3AB5 /* AppIcon-180.png */,
 				CD8DED081C2FFC5600069EAD /* piano.jpg */,
 				CD8DED091C2FFC5600069EAD /* profile.jpg */,
 				CD8DED021C2FDEEC00069EAD /* FontAwesome.ttf */,
@@ -327,12 +345,18 @@
 			files = (
 				CD8DED031C2FDEEC00069EAD /* FontAwesome.ttf in Resources */,
 				CD064F2E1C2EB6840027D752 /* Note.storyboard in Resources */,
+				CD31FFF91C33F5AB00EA3AB5 /* AppIcon-180.png in Resources */,
+				CD31FFF51C33F5AB00EA3AB5 /* AppIcon-60.png in Resources */,
 				253F2E3B1A7F5907007FD89E /* LaunchScreen.xib in Resources */,
+				CD31FFF81C33F5AB00EA3AB5 /* AppIcon-120.png in Resources */,
+				CD31FFF61C33F5AB00EA3AB5 /* AppIcon-80.png in Resources */,
 				CD8DED0B1C2FFC5600069EAD /* profile.jpg in Resources */,
 				CD8DECFD1C2FDCD800069EAD /* Login.storyboard in Resources */,
 				253F2E381A7F5907007FD89E /* Images.xcassets in Resources */,
 				CD8DED0A1C2FFC5600069EAD /* piano.jpg in Resources */,
+				CD31FFF71C33F5AB00EA3AB5 /* AppIcon-87.png in Resources */,
 				CD064F361C2EBA700027D752 /* sample.mp4 in Resources */,
+				CD31FFF41C33F5AB00EA3AB5 /* AppIcon-58.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
