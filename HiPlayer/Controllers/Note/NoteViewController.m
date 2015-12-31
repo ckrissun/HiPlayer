@@ -5,35 +5,29 @@
 //  Created by Paqin on 12/1/15.
 //  Copyright © 2015 Neo. All rights reserved.
 //
+
 #import "NoteViewController.h"
-#define PAGESIZE 1
 
 
 @interface NoteViewController ()
 
-
-
 @end
+
 @implementation NoteViewController
 
+static const NSInteger PAGESIZE = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-     self.pageno=1;
-     _discussionArray=[[NSMutableArray alloc]initWithObjects:@"demoContent",@"demoContent", @"demoContent", @"demoContent", @"demoContent",  nil];
     
+    // Do any additional setup after loading the view.
+    self.pageno = 1;
+    _commentArray = [[NSMutableArray alloc]initWithObjects:@"demoContent", @"demoContent", @"demoContent", @"demoContent", @"demoContent", nil];
 }
--(void)viewWillDisappear:(BOOL)animated
-{
-    if(self.secondViewController!=nil && !self.secondViewController.player.isFullscreen)
-    {
-        [self.secondViewController removeView];
-        [self.secondViewController.view removeFromSuperview];
-        self.secondViewController=nil;
-        
-        
-        
+
+- (void)viewWillDisappear:(BOOL)animated {
+    if (self.commentViewController && !self.commentViewController.player.isFullscreen) {
+        [self cleanupCommentViewController];
     }
 }
 
@@ -41,92 +35,76 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
   
-      [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(orientationChanged:)    name:UIDeviceOrientationDidChangeNotification  object:nil];
-  
-    
-  }
-- (void)orientationChanged:(NSNotification *)notification{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(orientationChanged:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
+}
+
+- (void)orientationChanged:(NSNotification *)notification {
     [self adjustViewsForOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
 }
 
-- (void) adjustViewsForOrientation:(UIInterfaceOrientation) orientation {
-    
-    switch (orientation)
-    {
+- (void) adjustViewsForOrientation:(UIInterfaceOrientation)orientation {
+    switch (orientation) {
         case UIInterfaceOrientationPortrait:
-        case UIInterfaceOrientationPortraitUpsideDown:
-        {
-            //load the portrait view
-            if(self.secondViewController!=nil)
-            {
-                if(!self.secondViewController.player.fullscreen)
-                {
-                    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
-                        [[UIDevice currentDevice]
-                         setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait]
-                         forKey:@"orientation"];
+        case UIInterfaceOrientationPortraitUpsideDown: {
+            // load the portrait view
+            if(self.commentViewController && !self.commentViewController.player.fullscreen) {
+                if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
+                    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
                 }
             }
-        }
-            
             break;
+        }
         case UIInterfaceOrientationLandscapeLeft:
-        case UIInterfaceOrientationLandscapeRight:
-        {
-            if(self.secondViewController!=nil)
-            {
+        case UIInterfaceOrientationLandscapeRight: {
+            if(self.commentViewController) {
                  NSLog(@"landscape called;");
-               // if(!self.secondViewController.player.fullscreen && self.secondViewController.viewTable.alpha>=1)
+               // if(!self.commentViewController.player.fullscreen && self.discussionViewController.viewTable.alpha>=1)
                 //{
                
-                self.secondViewController.player.controlStyle =  MPMovieControlStyleDefault;
-                self.secondViewController.player.fullscreen = YES;
+                self.commentViewController.player.controlStyle = MPMovieControlStyleDefault;
+                self.commentViewController.player.fullscreen = YES;
                  
                 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willExitFullscreen:) name:MPMoviePlayerWillExitFullscreenNotification object:nil];
                 //}
-               /* else if( self.secondViewController.viewTable.alpha<=0)
+               /* else if( self.commentViewController.viewTable.alpha<=0)
                 {
                     if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
                         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
                 } */
-                
-          
             }
-            
-            
-        }
             break;
-        case UIInterfaceOrientationUnknown:break;
+        }
+        case UIInterfaceOrientationUnknown:
+            break;
     }
 }
 
 - (void)willExitFullscreen:(NSNotification*)notification {
-    
-    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
-     [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerWillExitFullscreenNotification object:nil];
+    }
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerWillExitFullscreenNotification object:nil];
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    
 }
--(void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-   
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
 }
+
 /*
 #pragma mark - Navigation
 
@@ -138,113 +116,86 @@
 */
 
 
-
-
-
-
-#pragma mark -
 #pragma mark - UITableViewDataSource & delegate
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  
-    return self.discussionArray.count;
+    return self.commentArray.count;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 110;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-        return [self tableView:tableView discussionCellForAtIndexPath:indexPath];
+    return [self tableView:tableView commentCellForAtIndexPath:indexPath];
 }
 
-// create discussion cell
--(UITableViewCell *)tableView:(UITableView *)tableView discussionCellForAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"songsCell";
-    UITableViewCell *cell;
-    cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+// create comment cell
+static NSString *const CellIdentifier = @"songsCell";
+
+-(UITableViewCell *)tableView:(UITableView *)tableView commentCellForAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
-    UIImageView *bgImage=(UIImageView *)[cell.contentView viewWithTag:1];
-    UIImageView *profileImage=(UIImageView *)[cell.contentView viewWithTag:2];
-    
     // create border of the background image
-    bgImage.layer.borderColor=[UIColor lightGrayColor].CGColor;
-    bgImage.layer.borderWidth=0.5;
+    UIImageView *backgroundImage = [cell.contentView viewWithTag:1];
+    backgroundImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    backgroundImage.layer.borderWidth = 0.5;
     // create rounded player image
-    profileImage.layer.cornerRadius=profileImage.frame.size.width/2;
-    profileImage.layer.masksToBounds=YES;
-    return  cell;
+    UIImageView *profileImage = [cell.contentView viewWithTag:2];
+    profileImage.layer.cornerRadius = profileImage.frame.size.width/2;
+    profileImage.layer.masksToBounds = YES;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if(self.secondViewController==nil)
-    {
-        [self showSecondController];
-    }
-    else
-    {
-        [self.secondViewController removeView];
-        [self.secondViewController.view removeFromSuperview];
-        self.secondViewController=nil;
-        
-        [self showSecondController];
-        
-    }
-
-    
-    
-   
+    [self cleanupCommentViewController];
+    [self showCommentViewController];
 }
 
-#pragma mark -
-#pragma mark -Important Methods
+#pragma mark - Important Methods
 
--(void)showSecondController
-{   
-    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+- (void)showCommentViewController {
+    if (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])) {
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
-
-    self.secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentViewController"];
+    }
+    
+    self.commentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentViewController"];
     
     //initial frame
     UIView *parentView = self.navigationController.view;
-    self.secondViewController.view.frame=CGRectMake(parentView.frame.size.width-50, parentView.frame.size.height-50, parentView.frame.size.width, parentView.frame.size.height);
-    self.secondViewController.initialFirstViewFrame=parentView.frame;
-    
-    self.secondViewController.view.alpha=0;
-    self.secondViewController.view.transform=CGAffineTransformMakeScale(0.2, 0.2);
-    
-    [parentView addSubview:self.secondViewController.view];
-    self.secondViewController.onView=parentView;
+    self.commentViewController.view.frame = CGRectMake(parentView.frame.size.width-50, parentView.frame.size.height-50, parentView.frame.size.width, parentView.frame.size.height);
+    self.commentViewController.initialFirstViewFrame = parentView.frame;
+    self.commentViewController.view.alpha = 0;
+    self.commentViewController.view.transform = CGAffineTransformMakeScale(0.2, 0.2);
+    [parentView addSubview:self.commentViewController.view];
+    self.commentViewController.onView = parentView;
     
     [UIView animateWithDuration:0.9f animations:^{
-        self.secondViewController.view.transform=CGAffineTransformMakeScale(1.0, 1.0);
-        self.secondViewController.view.alpha=1;
-        
-        self.secondViewController.view.frame=CGRectMake(parentView.frame.origin.x, parentView.frame.origin.y, parentView.frame.size.width, parentView.frame.size.height);
+        self.commentViewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0);
+        self.commentViewController.view.alpha = 1;
+        self.commentViewController.view.frame = CGRectMake(parentView.frame.origin.x, parentView.frame.origin.y, parentView.frame.size.width, parentView.frame.size.height);
     }];
-
-}
-- (void)removeController
-{
-    
-    self.secondViewController=nil;
-    
 }
 
+- (void)cleanupCommentViewController {
+    if (!self.commentViewController) {
+        return;
+    }
+    [self.commentViewController removeView];
+    [self.commentViewController.view removeFromSuperview];
+    self.commentViewController = nil;
+}
 
+- (void)removeController {
+    [self cleanupCommentViewController];
+}
 
-
-@end
+@end // NoteViewController.m
