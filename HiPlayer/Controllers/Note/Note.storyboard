@@ -386,9 +386,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETu-wA-gWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1798" y="-521"/>
+            <point key="canvasLocation" x="-1627" y="-533"/>
         </scene>
-        <!--Note View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="IPb-lk-9Du">
+            <objects>
+                <navigationController storyboardIdentifier="Nav" id="yGp-l7-iZl" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GAk-Hf-jbW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ujJ-gG-PcZ" kind="relationship" relationship="rootViewController" id="69s-hC-lhv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DG5-Bm-4ti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2516" y="-558"/>
+        </scene>
+        <!--笔记-->
         <scene sceneID="epL-Gt-hE5">
             <objects>
                 <viewController storyboardIdentifier="NoteViewController" id="ujJ-gG-PcZ" customClass="NoteViewController" sceneMemberID="viewController">
@@ -405,7 +423,7 @@
                                 <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="songsCell" rowHeight="110" id="VKF-cc-de5">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="110"/>
+                                        <rect key="frame" x="0.0" y="86" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VKF-cc-de5" id="LxQ-Uq-vi5">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
@@ -550,6 +568,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="bxe-gt-wfc" secondAttribute="trailing" constant="-16" id="yFG-rL-yR4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="笔记" id="pAS-7s-Bhe"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
@@ -558,7 +577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KjM-I9-cZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2259" y="-526"/>
+            <point key="canvasLocation" x="-2046" y="-534"/>
         </scene>
     </scenes>
     <resources>

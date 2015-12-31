@@ -217,23 +217,23 @@
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger: UIInterfaceOrientationPortrait] forKey:@"orientation"];
 
     self.secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CommentViewController"];
-    //initial frame
-    self.secondViewController.view.frame=CGRectMake(self.view.frame.size.width-50, self.view.frame.size.height-50, self.view.frame.size.width, self.view.frame.size.height);
-    self.secondViewController.initialFirstViewFrame=self.view.frame;
     
+    //initial frame
+    UIView *parentView = self.navigationController.view;
+    self.secondViewController.view.frame=CGRectMake(parentView.frame.size.width-50, parentView.frame.size.height-50, parentView.frame.size.width, parentView.frame.size.height);
+    self.secondViewController.initialFirstViewFrame=parentView.frame;
     
     self.secondViewController.view.alpha=0;
     self.secondViewController.view.transform=CGAffineTransformMakeScale(0.2, 0.2);
     
-    
-    [self.view addSubview:self.secondViewController.view];
-    self.secondViewController.onView=self.view;
+    [parentView addSubview:self.secondViewController.view];
+    self.secondViewController.onView=parentView;
     
     [UIView animateWithDuration:0.9f animations:^{
         self.secondViewController.view.transform=CGAffineTransformMakeScale(1.0, 1.0);
         self.secondViewController.view.alpha=1;
         
-        self.secondViewController.view.frame=CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+        self.secondViewController.view.frame=CGRectMake(parentView.frame.origin.x, parentView.frame.origin.y, parentView.frame.size.width, parentView.frame.size.height);
     }];
 
 }

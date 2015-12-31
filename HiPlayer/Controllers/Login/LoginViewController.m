@@ -103,8 +103,8 @@ static NSString *const defaultPassword = @"d8bab9216bb259fb4ffa5445ecfb9c05";
 
 - (void)showNoteViewController {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Note" bundle:[NSBundle mainBundle]];
-    NoteViewController *noteViewController = [storyboard instantiateViewControllerWithIdentifier:@"NoteViewController"];
-    [self presentViewController:noteViewController animated:YES completion:^{
+    UINavigationController *noteNav = [storyboard instantiateViewControllerWithIdentifier:@"Nav"];
+    [self presentViewController:noteNav animated:YES completion:^{
         if (_hub) {
             [_hub hide:YES];
         }
