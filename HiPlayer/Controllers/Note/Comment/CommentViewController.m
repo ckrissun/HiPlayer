@@ -696,6 +696,19 @@ static NSString *const cellIdentifier = @"videoCommentCell";
 }
 
 - (IBAction)btnSendAction:(id)sender {
+    // write to realm
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    Comment *item = [[Comment alloc] init];
+    item.commenterName = @"爸爸";
+    item.content = self.txtViewGrowing.text;
+    item.timestamp = [[NSDate date] timeIntervalSince1970];
+    [realm beginWriteTransaction];
+    [realm addObject:item];
+    [realm commitWriteTransaction];
+    
+    // reload table view
+    [self.tblView reloadData];
+    
     [self.txtViewGrowing resignFirstResponder];
     self.txtViewGrowing.text=@"";
     [UIView animateWithDuration:0.2f
