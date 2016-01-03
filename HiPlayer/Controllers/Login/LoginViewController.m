@@ -49,6 +49,8 @@
     gesture.numberOfTapsRequired = 1;
     gesture.delegate = self;
     [self.view addGestureRecognizer:gesture];
+    
+    [_accountField becomeFirstResponder];
 }
 
 #pragma mark - gesture delegate
