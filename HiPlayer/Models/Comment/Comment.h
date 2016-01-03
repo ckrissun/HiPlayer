@@ -14,10 +14,16 @@
 // Comment Model
 @interface Comment : RLMObject
 
-@property NSString *commenter;
-@property NSString *content;
-@property NSTimeInterval timestamp;
+@property NSInteger noteId;
+@property NSInteger commenterId;
+@property NSString* commenterName;
+@property NSString* content;
+@property NSInteger timestamp;
 
 @end
+
+// This protocol enables typed collections. i.e.:
+// RLMArray<CommentItem>
+RLM_ARRAY_TYPE(Comment)
 
 #endif /* Comment_h */

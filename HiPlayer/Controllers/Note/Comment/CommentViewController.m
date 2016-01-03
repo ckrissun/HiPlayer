@@ -72,13 +72,20 @@
 }
 
 - (void)initComment {
-    self.comments = [[NSMutableArray alloc]initWithCapacity:5];
-    
-    for (NSUInteger i = 0; i < 5; i++) {
-        Comment *item = [[Comment alloc]initWithValue:@{@"commenter":@"爸爸",@"content":@"今天弹得很不错，赏黄金百两",@"timestamp":@1451606400}];
-        item.timestamp -= i * (24*3600);
-        [self.comments addObject:item];
+    if ([[Comment allObjects] count] > 0) {
+        return;
     }
+    
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    for (NSInteger i = 0; i < 10; i++) {
+        Comment *item = [[Comment alloc] init];
+        item.commenterName = @"爸爸";
+        item.content = @"今天弹得很不错，赏黄金百两";
+        item.timestamp = 1451606400 - i*(24*3600);
+        [realm addObject:item];
+    }
+    [realm commitWriteTransaction];
 }
 
 #pragma mark- Status Bar Hidden function
@@ -630,7 +637,7 @@
 
 // number of row in the section, I assume there is only 1 row
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section {
-    return self.comments.count;
+    return [[Comment allObjects] count];
 }
 
 // the cell will be returned to the tableView
@@ -645,11 +652,12 @@ static NSString *const cellIdentifier = @"videoCommentCell";
     cell.contentView.backgroundColor = [UIColor clearColor];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
-    Comment* item = [self.comments objectAtIndex:indexPath.row];
+    RLMResults<Comment*> *results = [Comment allObjects];
+    Comment* item = [results objectAtIndex:indexPath.row];
     
     // comment setting
     UILabel *commenterLabel = [cell.contentView viewWithTag:11];
-    commenterLabel.text = [NSString stringWithFormat:@"%@ 说", item.commenter];
+    commenterLabel.text = [NSString stringWithFormat:@"%@ 说:", item.commenterName];
     
     UILabel *content = [cell.contentView viewWithTag:12];
     content.text = item.content;

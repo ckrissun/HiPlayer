@@ -8,8 +8,10 @@
 
 #import "Comment.h"
 
-
 @implementation Comment
 
++ (NSString *)primaryKey {
+    return @"timestamp";
+}
 
 @end // Comment.m
