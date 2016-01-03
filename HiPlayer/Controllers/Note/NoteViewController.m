@@ -15,7 +15,7 @@
 
 @implementation NoteViewController
 
-static const NSInteger PAGESIZE = 1;
+//static const NSInteger PAGESIZE = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

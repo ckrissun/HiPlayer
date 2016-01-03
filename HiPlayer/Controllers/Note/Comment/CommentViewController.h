@@ -11,7 +11,9 @@
 
 
 @protocol RemoveViewDelegate
+
 - (void)removeController;
+
 @end
 
 typedef NS_ENUM(NSUInteger, UIPanGestureRecognizerDirection) {
@@ -23,25 +25,27 @@ typedef NS_ENUM(NSUInteger, UIPanGestureRecognizerDirection) {
 };
 
 @interface CommentViewController : UIViewController<UIGestureRecognizerDelegate,UITextViewDelegate>
-@property (nonatomic, assign) id  <RemoveViewDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UIView *viewYouTube;
-@property (weak, nonatomic) IBOutlet UIView *viewTable;
 
+@property (nonatomic, assign) id<RemoveViewDelegate> delegate;
 
-@property (strong, nonatomic) MPMoviePlayerController *player;
-@property (weak, nonatomic) IBOutlet UIView *viewShare;
-@property (weak, nonatomic) IBOutlet UIView *viewGrowingTextView;
-@property (weak, nonatomic) IBOutlet UITableView *tblView;
-@property (weak, nonatomic) IBOutlet UIButton *btnDown;
+@property (nonatomic, weak) IBOutlet UIView *viewYouTube;
+@property (nonatomic, weak) IBOutlet UIView *viewTable;
+@property (nonatomic, weak) IBOutlet UIView *viewShare;
+@property (nonatomic, weak) IBOutlet UIView *viewGrowingTextView;
+@property (nonatomic, weak) IBOutlet UIButton *btnDown;
+@property (nonatomic, weak) IBOutlet UITableView *tblView;
+@property (nonatomic, weak) IBOutlet UITextView *txtViewGrowing;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *btnDownBottomLayout;
+
 - (IBAction)btnDownTapAction:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextView *txtViewGrowing;
 - (IBAction)btnSendAction:(id)sender;
 
+@property (nonatomic) MPMoviePlayerController *player;
+@property (nonatomic) CGRect initialFirstViewFrame;
+@property (nonatomic) UIView *onView;
+@property (nonatomic) UIPanGestureRecognizer *panRecognizer;
+@property (nonatomic) UITapGestureRecognizer *tapRecognizer;
 
-@property(nonatomic)CGRect initialFirstViewFrame;
-@property(nonatomic,strong) UIPanGestureRecognizer *panRecognizer;
-@property(nonatomic,strong) UITapGestureRecognizer *tapRecognizer;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnDownBottomLayout;
--(void)removeView;
-@property(nonatomic,strong) UIView *onView;
-@end
+- (void)removeView;
+
+@end // CommentViewController.h
