@@ -13,6 +13,7 @@
 
 @interface TimeUtils : NSObject
 
++ (NSInteger)numberOfDaysByDate:(NSDate *)startDate endDate:(NSDate *)endDate;
 + (NSInteger)numberOfDaysByTimestamp:(NSTimeInterval)startTimestamp endTimeStamp:(NSTimeInterval)endTimestamp;
 
 @end

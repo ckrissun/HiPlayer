@@ -29,4 +29,18 @@ static NSInteger const secondsOfOneday = 24*3600;
     return (zeroTimestampOfEndDate - zeroTimestampOfStartDate) / secondsOfOneday;
 }
 
++ (NSInteger) numberOfDaysByDate:(NSDate *)startDate endDate:(NSDate *)endDate {
+    NSInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDateComponents *comps = [cal components:unitFlags fromDate:startDate];
+    NSDate *newBegin = [cal dateFromComponents:comps];
+    
+    comps = [cal components:unitFlags fromDate:endDate];
+    NSDate *newEnd = [cal dateFromComponents:comps];
+    
+    NSTimeInterval interval = [newEnd timeIntervalSinceDate:newBegin];
+    return ((NSInteger)interval)/(3600*24);
+}
+
 @end
