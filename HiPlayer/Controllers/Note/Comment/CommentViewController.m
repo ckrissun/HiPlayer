@@ -7,7 +7,10 @@
 //
 
 #import <QuartzCore/CALayer.h>
+#import <Realm/Realm.h>
 #import "CommentViewController.h"
+#import "Comment.h"
+#import "TimeUtils.h"
 
 @interface CommentViewController ()
 
@@ -50,6 +53,9 @@
     //init stopspot array
     self.stopSpotArray = [[NSMutableArray alloc] init];
     
+    //init comments
+    [self initComment];
+    
     // [[BSUtils sharedInstance] showLoadingMode:self];
     
     //adding demo Video -- giving a little delay to store correct frame size
@@ -63,6 +69,16 @@
     isExpandedMode=TRUE;
     
     self.btnDown.hidden=TRUE;
+}
+
+- (void)initComment {
+    self.comments = [[NSMutableArray alloc]initWithCapacity:5];
+    
+    for (NSUInteger i = 0; i < 5; i++) {
+        Comment *item = [[Comment alloc]initWithValue:@{@"commenter":@"爸爸",@"content":@"今天弹得很不错，赏黄金百两",@"timestamp":@1451606400}];
+        item.timestamp -= i * (24*3600);
+        [self.comments addObject:item];
+    }
 }
 
 #pragma mark- Status Bar Hidden function
@@ -614,7 +630,7 @@
 
 // number of row in the section, I assume there is only 1 row
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.comments.count;
 }
 
 // the cell will be returned to the tableView
@@ -629,8 +645,22 @@ static NSString *const cellIdentifier = @"videoCommentCell";
     cell.contentView.backgroundColor = [UIColor clearColor];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     
+    Comment* item = [self.comments objectAtIndex:indexPath.row];
+    
+    // comment setting
+    UILabel *commenterLabel = [cell.contentView viewWithTag:11];
+    commenterLabel.text = [NSString stringWithFormat:@"%@ 说", item.commenter];
+    
+    UILabel *content = [cell.contentView viewWithTag:12];
+    content.text = item.content;
+    
+    NSTimeInterval nowTimestamp = [[NSDate date] timeIntervalSince1970];
+    NSInteger deltadays = [TimeUtils numberOfDaysByTimestamp:item.timestamp endTimeStamp:nowTimestamp];
+    UILabel *deltadaysLabel = [cell.contentView viewWithTag:15];
+    deltadaysLabel.text = [NSString stringWithFormat:@"%d 天前", deltadays];
+    
     // create rounded player image
-    UIImageView *profileImage=(UIImageView *)[cell.contentView viewWithTag:2];
+    UIImageView *profileImage=[cell.contentView viewWithTag:2];
     profileImage.layer.cornerRadius=profileImage.frame.size.width/2;
     profileImage.layer.masksToBounds=YES;
     return cell;

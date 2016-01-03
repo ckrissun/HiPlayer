@@ -28,6 +28,9 @@
 		CD8DED061C2FE46F00069EAD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8DED051C2FE46F00069EAD /* LoginViewController.m */; };
 		CD8DED0A1C2FFC5600069EAD /* piano.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD8DED081C2FFC5600069EAD /* piano.jpg */; };
 		CD8DED0B1C2FFC5600069EAD /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD8DED091C2FFC5600069EAD /* profile.jpg */; };
+		CDCA3DCC1C38BD1D007158F9 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA3DCB1C38BD1D007158F9 /* Comment.m */; };
+		CDCA3DD21C38BD9A007158F9 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA3DD11C38BD9A007158F9 /* Note.m */; };
+		CDCA3DD81C38FEC3007158F9 /* TimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA3DD71C38FEC3007158F9 /* TimeUtils.m */; };
 		CDDF06791C26F9E10083EC86 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDF06781C26F9E10083EC86 /* CoreData.framework */; };
 		DC2D24F7FA51CFC9744A03C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C26A3949E2863D0B9B96AF6F /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,12 @@
 		CD8DED071C2FFB9600069EAD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Controllers/Login/LoginViewController.h; sourceTree = "<group>"; };
 		CD8DED081C2FFC5600069EAD /* piano.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = piano.jpg; path = Resources/piano.jpg; sourceTree = "<group>"; };
 		CD8DED091C2FFC5600069EAD /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profile.jpg; path = Resources/profile.jpg; sourceTree = "<group>"; };
+		CDCA3DCB1C38BD1D007158F9 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comment.m; path = Models/Comment/Comment.m; sourceTree = "<group>"; };
+		CDCA3DCE1C38BD4B007158F9 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = Models/Comment/Comment.h; sourceTree = "<group>"; };
+		CDCA3DD01C38BD87007158F9 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Note.h; path = Models/Note/Note.h; sourceTree = "<group>"; };
+		CDCA3DD11C38BD9A007158F9 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Note.m; path = Models/Note/Note.m; sourceTree = "<group>"; };
+		CDCA3DD61C38FEAE007158F9 /* TimeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimeUtils.h; path = Utils/TimeUtils.h; sourceTree = "<group>"; };
+		CDCA3DD71C38FEC3007158F9 /* TimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeUtils.m; path = Utils/TimeUtils.m; sourceTree = "<group>"; };
 		CDDF06781C26F9E10083EC86 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F0E27032F6AA559B9A7D7D6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +137,7 @@
 				253F2E371A7F5907007FD89E /* Images.xcassets */,
 				253F2E391A7F5907007FD89E /* LaunchScreen.xib */,
 				CD064F2F1C2EBA1C0027D752 /* Resources */,
+				CDCA3DD31C38FE5E007158F9 /* Utils */,
 				253F2E2A1A7F5907007FD89E /* Supporting Files */,
 			);
 			path = HiPlayer;
@@ -237,6 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				CDDF06741C26EC970083EC86 /* CoreDataHelper */,
+				CDCA3DC91C38BCD4007158F9 /* Comment */,
+				CDCA3DCA1C38BCDC007158F9 /* Note */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -248,6 +260,33 @@
 				CD31FF921C324FBF00EA3AB5 /* NSString+MD5.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		CDCA3DC91C38BCD4007158F9 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA3DCE1C38BD4B007158F9 /* Comment.h */,
+				CDCA3DCB1C38BD1D007158F9 /* Comment.m */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
+		CDCA3DCA1C38BCDC007158F9 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA3DD01C38BD87007158F9 /* Note.h */,
+				CDCA3DD11C38BD9A007158F9 /* Note.m */,
+			);
+			name = Note;
+			sourceTree = "<group>";
+		};
+		CDCA3DD31C38FE5E007158F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA3DD61C38FEAE007158F9 /* TimeUtils.h */,
+				CDCA3DD71C38FEC3007158F9 /* TimeUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		CDDF06741C26EC970083EC86 /* CoreDataHelper */ = {
@@ -422,13 +461,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCA3DD21C38BD9A007158F9 /* Note.m in Sources */,
 				CD064F461C2EBCCC0027D752 /* main.m in Sources */,
+				CDCA3DD81C38FEC3007158F9 /* TimeUtils.m in Sources */,
 				CD064F2C1C2E9F350027D752 /* CommentViewController.m in Sources */,
 				CD8DED061C2FE46F00069EAD /* LoginViewController.m in Sources */,
 				CD064F3A1C2EBAB40027D752 /* AppDelegate.m in Sources */,
 				CD064F281C2E9F1E0027D752 /* NoteViewController.m in Sources */,
 				CD064F3E1C2EBB1D0027D752 /* CoreDataHelper.m in Sources */,
 				CD31FF931C324FBF00EA3AB5 /* NSString+MD5.m in Sources */,
+				CDCA3DCC1C38BD1D007158F9 /* Comment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

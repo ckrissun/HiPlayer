@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-
 @protocol RemoveViewDelegate
 
 - (void)removeController;
@@ -45,6 +44,7 @@ typedef NS_ENUM(NSUInteger, UIPanGestureRecognizerDirection) {
 @property (nonatomic) UIView *onView;
 @property (nonatomic) UIPanGestureRecognizer *panRecognizer;
 @property (nonatomic) UITapGestureRecognizer *tapRecognizer;
+@property (nonatomic) NSMutableArray *comments;
 
 - (void)removeView;
 
