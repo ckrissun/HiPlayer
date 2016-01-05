@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		253F2E381A7F5907007FD89E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253F2E371A7F5907007FD89E /* Images.xcassets */; };
 		253F2E3B1A7F5907007FD89E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253F2E391A7F5907007FD89E /* LaunchScreen.xib */; };
+		9B03CBE31C3C1CA00010DA10 /* BaseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B03CBE21C3C1CA00010DA10 /* BaseClient.m */; };
 		CD064F281C2E9F1E0027D752 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F271C2E9F1E0027D752 /* NoteViewController.m */; };
 		CD064F2C1C2E9F350027D752 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD064F2B1C2E9F350027D752 /* CommentViewController.m */; };
 		CD064F2E1C2EB6840027D752 /* Note.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD064F2D1C2EB6840027D752 /* Note.storyboard */; };
@@ -51,6 +52,8 @@
 		253F2E3A1A7F5907007FD89E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		253F2E401A7F5907007FD89E /* HiPlayer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HiPlayer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D50418457D2AE8E6265B0DB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9B03CBE11C3C1CA00010DA10 /* BaseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseClient.h; sourceTree = "<group>"; };
+		9B03CBE21C3C1CA00010DA10 /* BaseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseClient.m; sourceTree = "<group>"; };
 		C26A3949E2863D0B9B96AF6F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD064F261C2E9F1E0027D752 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoteViewController.h; path = Controllers/Note/NoteViewController.h; sourceTree = "<group>"; };
 		CD064F271C2E9F1E0027D752 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoteViewController.m; path = Controllers/Note/NoteViewController.m; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		253F2E1E1A7F5907007FD89E = {
 			isa = PBXGroup;
 			children = (
+				9B03CBE01C3C1BB10010DA10 /* Client */,
 				253F2E291A7F5907007FD89E /* HiPlayer */,
 				253F2E281A7F5907007FD89E /* Products */,
 				5742BC0FC2C6EB14433A24D4 /* Pods */,
@@ -168,6 +172,15 @@
 				F0E27032F6AA559B9A7D7D6E /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B03CBE01C3C1BB10010DA10 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				9B03CBE11C3C1CA00010DA10 /* BaseClient.h */,
+				9B03CBE21C3C1CA00010DA10 /* BaseClient.m */,
+			);
+			name = Client;
 			sourceTree = "<group>";
 		};
 		CD064F221C2E3C450027D752 /* Controllers */ = {
@@ -463,6 +476,7 @@
 			files = (
 				CDCA3DD21C38BD9A007158F9 /* Note.m in Sources */,
 				CD064F461C2EBCCC0027D752 /* main.m in Sources */,
+				9B03CBE31C3C1CA00010DA10 /* BaseClient.m in Sources */,
 				CDCA3DD81C38FEC3007158F9 /* TimeUtils.m in Sources */,
 				CD064F2C1C2E9F350027D752 /* CommentViewController.m in Sources */,
 				CD8DED061C2FE46F00069EAD /* LoginViewController.m in Sources */,
